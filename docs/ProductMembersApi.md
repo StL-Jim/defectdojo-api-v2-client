@@ -1,0 +1,466 @@
+# openapi_client.ProductMembersApi
+
+All URIs are relative to *https://demo.defectdojo.org/api/v2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**product_members_create**](ProductMembersApi.md#product_members_create) | **POST** /product_members/ | 
+[**product_members_delete**](ProductMembersApi.md#product_members_delete) | **DELETE** /product_members/{id}/ | 
+[**product_members_list**](ProductMembersApi.md#product_members_list) | **GET** /product_members/ | 
+[**product_members_partial_update**](ProductMembersApi.md#product_members_partial_update) | **PATCH** /product_members/{id}/ | 
+[**product_members_read**](ProductMembersApi.md#product_members_read) | **GET** /product_members/{id}/ | 
+[**product_members_update**](ProductMembersApi.md#product_members_update) | **PUT** /product_members/{id}/ | 
+
+
+# **product_members_create**
+> ProductMember product_members_create(data)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    data = openapi_client.ProductMember() # ProductMember | 
+
+    try:
+        api_response = api_instance.product_members_create(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**ProductMember**](ProductMember.md)|  | 
+
+### Return type
+
+[**ProductMember**](ProductMember.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **product_members_delete**
+> product_members_delete(id)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    id = 56 # int | A unique integer value identifying this product_ member.
+
+    try:
+        api_instance.product_members_delete(id)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this product_ member. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **product_members_list**
+> InlineResponse20030 product_members_list(limit=limit, offset=offset, prefetch=prefetch)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    limit = 56 # int | Number of results to return per page. (optional)
+offset = 56 # int | The initial index from which to return the results. (optional)
+prefetch = ['prefetch_example'] # list[str] |  (optional)
+
+    try:
+        api_response = api_instance.product_members_list(limit=limit, offset=offset, prefetch=prefetch)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Number of results to return per page. | [optional] 
+ **offset** | **int**| The initial index from which to return the results. | [optional] 
+ **prefetch** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20030**](InlineResponse20030.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **product_members_partial_update**
+> ProductMember product_members_partial_update(id)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    id = 56 # int | A unique integer value identifying this product_ member.
+
+    try:
+        api_response = api_instance.product_members_partial_update(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_partial_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this product_ member. | 
+
+### Return type
+
+[**ProductMember**](ProductMember.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**405** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **product_members_read**
+> InlineResponse20031 product_members_read(id, prefetch=prefetch)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    id = 56 # int | A unique integer value identifying this product_ member.
+prefetch = ['prefetch_example'] # list[str] |  (optional)
+
+    try:
+        api_response = api_instance.product_members_read(id, prefetch=prefetch)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_read: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this product_ member. | 
+ **prefetch** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20031**](InlineResponse20031.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **product_members_update**
+> ProductMember product_members_update(id, data)
+
+
+
+### Example
+
+* Api Key Authentication (api_key):
+```python
+from __future__ import print_function
+import time
+import openapi_client
+from openapi_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://demo.defectdojo.org/api/v2
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: api_key
+configuration = openapi_client.Configuration(
+    host = "https://demo.defectdojo.org/api/v2",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.ProductMembersApi(api_client)
+    id = 56 # int | A unique integer value identifying this product_ member.
+data = openapi_client.ProductMember() # ProductMember | 
+
+    try:
+        api_response = api_instance.product_members_update(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ProductMembersApi->product_members_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this product_ member. | 
+ **data** | [**ProductMember**](ProductMember.md)|  | 
+
+### Return type
+
+[**ProductMember**](ProductMember.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

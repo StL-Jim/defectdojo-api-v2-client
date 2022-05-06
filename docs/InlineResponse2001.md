@@ -1,0 +1,14 @@
+# InlineResponse2001
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**count** | **int** |  | 
+**next** | **str** |  | [optional] 
+**previous** | **str** |  | [optional] 
+**results** | [**list[DojoGroupMember]**](DojoGroupMember.md) |  | 
+**prefetch** | [**InlineResponse2001Prefetch**](InlineResponse2001Prefetch.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

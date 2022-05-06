@@ -1,0 +1,14 @@
+# InlineResponse2004
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] [readonly] 
+**name** | **str** |  | 
+**description** | **str** |  | [optional] 
+**users** | **list[int]** |  | [optional] [readonly] 
+**prefetch** | [**InlineResponse2003Prefetch**](InlineResponse2003Prefetch.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
